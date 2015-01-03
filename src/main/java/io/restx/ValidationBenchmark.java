@@ -43,7 +43,8 @@ import java.util.Set;
 
 @BenchmarkMode({Mode.SingleShotTime, Mode.SampleTime})
 @Measurement(iterations = 10)
-@Warmup(iterations = 10)
+@Warmup(iterations = 8)
+@Fork(6)
 public @State(Scope.Benchmark) class ValidationBenchmark {
 
     Validator validator;
